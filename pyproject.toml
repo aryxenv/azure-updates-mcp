@@ -11,3 +11,15 @@ dependencies = [
     "fastmcp>=3.4.2",
     "httpx>=0.28.1",
 ]
+
+[project.scripts]
+azure-updates-mcp = "azure_updates_mcp.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.10.4,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]
